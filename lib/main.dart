@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:go_router/go_router.dart';
 import 'package:notes/view/screens/login_screen.dart';
+import 'package:notes/view/screens/registration_screen.dart';
 import 'package:notes/view/screens/splash_screen.dart';
 
 void main() async {
@@ -20,6 +21,10 @@ class NotesApp extends StatelessWidget {
       GoRoute(
         path: '/login',
         builder: (context, state) => LoginScreen(), //route for loginscreen
+      ),
+      GoRoute(
+        path: '/register',
+        builder: (context, state) => RegistrationScreen(),  // Define route for RegistrationScreen
       ),
     ],
   );

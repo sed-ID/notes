@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
             TextButton(
               onPressed: () {
                 context.go(
-                    '/register'); // Navigate to Registration Screen (to be implemented)
+                    '/register'); // Navigate to Registration Screen
               },
               child: Text("Don\'t Have an Account? Register"),
             ),
