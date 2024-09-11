@@ -30,7 +30,7 @@ class AddNoteScreen extends StatelessWidget {
             ),
             SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () => _addNote(),
+              onPressed: () => _addNote(context),  // Pass context to the _addNote method
               child: Text('Save Note'),
             ),
           ],
@@ -39,7 +39,7 @@ class AddNoteScreen extends StatelessWidget {
     );
   }
 
-  void _addNote() async {
+  void _addNote(BuildContext context) async {
     final title = titleController.text.trim();
     final description = descriptionController.text.trim();
 
@@ -59,7 +59,7 @@ class AddNoteScreen extends StatelessWidget {
       Get.snackbar('Success', 'Note added successfully');
 
       // Navigate back to the home screen after saving the note
-      Get.back();
+      context.go('/home');  // Use context.go to navigate to HomeScreen
     } catch (e) {
       Get.snackbar('Error', e.toString());
     }
