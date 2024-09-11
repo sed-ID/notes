@@ -67,7 +67,7 @@ class RegistrationScreen extends StatelessWidget {
         password: password,
       );
 
-      // Optionally: Save the user's name to the Firestore or Firebase user profile.
+      // maybe will save the user's name to the Firestore or Firebase user profile.
 
       Get.snackbar('Success', 'Registered successfully');
       context.go('/login');  // Navigate to Login Screen after successful registration

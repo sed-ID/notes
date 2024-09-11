@@ -63,7 +63,7 @@ class LoginScreen extends StatelessWidget {
         password: password,
       );
       Get.snackbar("success", "Logged in successfully");
-      context.go('/home'); // navigate to home screen (to be implemented)
+      context.go('/home'); // navigate to home screen
     } catch (e) {
       Get.snackbar(
         'Error',
